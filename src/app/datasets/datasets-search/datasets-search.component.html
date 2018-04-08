@@ -1,0 +1,24 @@
+<div class="search-result">
+<!--   <h4>Search Datasets by name :</h4> -->
+ 
+<!--   <input #searchBoxname id="search-boxname" (keyup)="searchname(searchBoxname.value)" /> -->
+ 
+ <h4>Full text Search :</h4>
+ 
+  <input #searchBox id="search-box" (keyup)="searchkeyword(searchBox.value)" />
+  
+<!--   <ul class="search-result"> -->
+<!--     <li *ngFor="let dataset of dsname$ | async" > <a -->
+<!-- 		routerLink="/detail/{{dataset.id}}"> <span class="badge">*</span> -->
+<!-- 			{{dataset.name}} </a> -->
+<!--     </li> -->
+    
+<!--   </ul> -->
+  <ul class="search-result">
+    <li *ngFor="let dataset of ds$ | async" > <a
+		routerLink="/detail/{{dataset.id}}"> <span class="badge">*</span>
+			{{dataset.name}} </a>
+    </li>
+    
+  </ul>
+</div>

@@ -1,0 +1,49 @@
+<div *ngIf="dataset">
+
+	<h2>{{ dataset.name | uppercase }} Details</h2>
+	<div>
+		<label>title: </label>
+		<p></p>
+		{{dataset.title}}
+	</div>
+	<div>
+		<label>groups: </label>
+		<p></p>
+		{{dataset.groups}}
+	</div>
+	<div>
+		<label>organization: </label>
+		<p></p>
+		{{dataset.organization}}
+	</div>
+	<div>
+		<label>tags: </label>
+		<p></p>
+		{{dataset.tags}}
+	</div>
+	<div>
+		<label>licensetitle: </label>
+		<p></p>
+		{{dataset.licensetitle}}
+	</div>
+	<div>
+		<label>author: </label>
+		<p></p>
+		{{dataset.author}}
+	</div>
+	<div>
+		<label>resources: </label>
+		<p></p>
+		<ul class="heroes">
+			<li *ngFor="let d of dataset.resources">
+			<span class="badge">{{d.format}}</span>
+			<a href="{{d.url}}" >{{d.url}}
+					
+			</a></li>
+		</ul>
+	</div>
+
+
+</div>
+<button (click)="goBack()">go back</button>
+
